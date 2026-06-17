@@ -1,0 +1,19 @@
+{
+  "name": "study-streak-tracker",
+  "version": "1.0.0",
+  "description": "Backend API for tracking daily study sessions and maintaining study streaks",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": ["study", "streak", "api"],
+  "author": "Rishika",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
