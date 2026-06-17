@@ -46,14 +46,20 @@ Built as Project 2 for DecodeLabs, this project demonstrates backend API develop
 
 ## 📁 Project Structure
 study-streak-tracker/
-├── app.js                    
+
+├── app.js      
+
 ├── package.json           
 ├── package-lock.json
-├── index.html               
+
+├── index.html     
+
 ├── style.css                 
-├── main.js                  
+├── main.js 
+
 ├── data/
-│   └── sessions.json        
+│   └── sessions.json  
+
 └── README.md
 
 ---
