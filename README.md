@@ -46,23 +46,14 @@ Built as Project 2 for DecodeLabs, this project demonstrates backend API develop
 
 ## 📁 Project Structure
 study-streak-tracker/
-
-├── app.js                    # Express server & API routes
-
-├── package.json              # Node dependencies & scripts
-
+├── app.js                    
+├── package.json           
 ├── package-lock.json
-
-├── index.html                # Dashboard frontend
-
-├── style.css                 # Responsive styling
-
-├── main.js                   # Frontend logic & API calls
-
+├── index.html               
+├── style.css                 
+├── main.js                  
 ├── data/
-
-│   └── sessions.json         # Persistent session storage
-
+│   └── sessions.json        
 └── README.md
 
 ---
