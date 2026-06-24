@@ -99,8 +99,8 @@ http://localhost:3000/index.html
 
 ## Screenshot
 
-![Study Streak Tracker](./screenshot1.png)
-![Study Streak Tracker](./screenshot2.png)
+![Study Streak Tracker](screenshots/screenshot1.png)
+![Study Streak Tracker](screenshots/screenshot2.png)
 
 
 ---
