@@ -1,199 +1,126 @@
-# Study Streak Tracker - Full Stack Productivity Dashboard 
+# Study Streak Tracker - Full Stack Productivity Dashboard
 🚀 Node.js Backend + Vanilla Frontend  
 DecodeLabs Full Stack Development Internship — Project 2: Backend API Integration
 
----
-
-## 📖 Overview
-**Study Streak Tracker** is a full-stack productivity application combining a Node.js/Express backend with a vanilla JavaScript frontend. It tracks daily study sessions, maintains streaks, stores progress persistently, and visualizes learning patterns through an intuitive dashboard.
-
-Built as Project 2 for DecodeLabs, this project demonstrates backend API development, data persistence, and real-time frontend updates with a focus on user engagement through streak mechanics.
+**Live Demo:** [View Live](https://your-github-username.github.io/study-streak-tracker)
 
 ---
 
-## 🚀 Live Features
+## Overview
 
-📊 **Study Session Tracking** — Log daily study sessions with duration, subject, and notes  
-🔥 **Streak System** — Automatic streak counting with visual indicators and milestone badges  
-📈 **Progress Dashboard** — Real-time statistics: total sessions, current streak, longest streak, average duration  
-📅 **Calendar View** — Visual heat-map showing study activity across weeks/months  
-🎯 **Goals & Targets** — Set daily study goals with progress bars and achievement tracking  
-🏆 **Badges & Milestones** — Unlock achievements at 7-day, 30-day, 100-day streaks  
-📱 **Fully Responsive** — Mobile-first design; works seamlessly on phone, tablet, desktop  
-💾 **Data Persistence** — Server-side storage with JSON file system; data survives app restarts  
-🎨 **Beautiful UI** — Modern dashboard with animated counters, smooth transitions, and intuitive controls  
+A simple full-stack web application to track daily study sessions and maintain a consistent study streak. Users can log their study hours by subject, view their progress, and monitor their streaks to stay motivated.
 
 ---
 
-## 🛠 Tech Stack
+## Features
 
-**Backend:**
-- Node.js runtime environment
-- Express.js framework for REST API
-- File-based JSON storage (data/sessions.json)
-- Nodemon for development auto-restart
-
-**Frontend:**
-- HTML5 semantic markup
-- CSS3 Flexbox/Grid + animations
-- Vanilla JavaScript (no frameworks)
-- Fetch API for backend communication
-- LocalStorage for client-side caching
-
-**No Dependencies (Frontend)** — Pure vanilla; no jQuery, Bootstrap, or React
+✅ **Add Study Sessions** — Log subject and hours studied  
+✅ **Track Streak** — See consecutive days of studying  
+✅ **View Statistics** — Today's hours, best day, total hours  
+✅ **Session Management** — Delete sessions  
+✅ **Real-time Updates** — Instant UI refresh  
+✅ **Data Persistence** — Sessions saved in JSON file  
 
 ---
 
-## 📁 Project Structure
+## Tech Stack
+
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Backend:** Node.js, Express.js
+- **Database:** JSON file storage
+- **API:** RESTful endpoints
+
+---
+
+## Project Structure
 study-streak-tracker/
 
-├── app.js                    # Express server & API routes
+├── app.js              (Backend server)
 
-├── package.json              # Node dependencies & scripts
+├── index.html          (Frontend UI)
 
-├── package-lock.json
-
-├── index.html                # Dashboard frontend
-
-├── style.css                 # Responsive styling
-
-├── main.js                   # Frontend logic & API calls
+├── package.json        (Dependencies)
 
 ├── data/
 
-│   └── sessions.json         # Persistent session storage
+│   └── sessions.json   (Data storage)
 
 └── README.md
 
 ---
 
-## 🚀 Key API Endpoints
+## API Endpoints
 
-| Method | Endpoint | Purpose |
-|--------|----------|---------|
-| GET | `/api/sessions` | Fetch all study sessions |
-| POST | `/api/sessions` | Create new session |
-| GET | `/api/stats` | Get streak & productivity stats |
-| DELETE | `/api/sessions/:id` | Delete a session |
-| GET | `/api/health` | Server health check |
-
----
-
-## 📊 Dashboard Sections
-
-### 1. Streak Counter
-- Current active streak (days)
-- Longest streak achieved
-- Last session date
-- Animated counter display
-
-### 2. Today's Stats
-- Sessions logged today
-- Total study time today
-- Goal progress bar
-
-### 3. Session History Table
-- Date, duration, subject, notes
-- Delete button for each entry
-- Sortable by date/duration
-
-### 4. Add Session Form
-- Date picker
-- Duration input (minutes)
-- Subject selection
-- Notes textarea
-- Submit button with validation
-
-### 5. Calendar Heatmap
-- Color-coded activity per day
-- Green = more study time
-- Gray = no activity
-- Hover shows session count
-
-### 6. Analytics
-- Weekly study time chart
-- Subject breakdown pie chart
-- Goal vs actual comparison
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/study` | Add a new study session |
+| GET | `/study` | Get all study sessions |
+| GET | `/streak` | Get current streak |
+| DELETE | `/study/:id` | Delete a session |
 
 ---
 
-## ▶️ Running Locally
+## How to Run
 
 ### Prerequisites
-- Node.js (v14+) installed
+- Node.js installed
 
-### Steps
-```bash
+### Installation & Setup
+
+1. **Clone the repository**
+git clone <your-repo-url>
+
 cd study-streak-tracker
+
+2. **Install dependencies**
 npm install
-node app.js
-```
 
-Server runs at `http://localhost:3000`
+3. **Start the server**
+npm start
 
-Open in browser — dashboard loads automatically.
-
----
-
-## 🎨 Design Highlights
-
-- **Color Scheme:** Vibrant blue (#1e40af) + gold accents (#fbbf24)
-- **Animations:** Smooth counter increments, fade-in effects, hover states
-- **Mobile:** Single column on <768px; adapts form and charts
-- **Desktop:** Multi-panel layout with sidebar navigation
+4. **Open in browser**
+http://localhost:3000/index.html
 
 ---
 
-## 💾 Data Storage
+## Usage
 
-Sessions stored in `data/sessions.json`:
-```json
-{
-  "sessions": [
-    {
-      "id": "1",
-      "date": "2024-06-15",
-      "duration": 45,
-      "subject": "DSA",
-      "notes": "Completed arrays problems",
-      "timestamp": 1718414400000
-    }
-  ]
-}
-```
+1. Enter a subject name (e.g., DSA, Web Dev)
+2. Enter hours studied (e.g., 2)
+3. Click "Add Session"
+4. View your stats:
+   - Current streak (consecutive days)
+   - Today's hours
+   - Best day (highest hours in one day)
+   - Total hours studied
 
 ---
 
-## 🔮 Future Enhancements
+## Screenshot
 
-- **Database Integration** — PostgreSQL/MongoDB instead of JSON files
-- **User Authentication** — Sign up, login, personal dashboards
-- **Cloud Sync** — Store data in cloud; access across devices
-- **Mobile App** — React Native or Flutter port
-- **Social Features** — Leaderboards, friend streaks, challenges
-- **Smart Notifications** — Reminders to study, streak warnings
-- **Export Data** — Download sessions as CSV/PDF
+![Study Streak Tracker](./screenshot1.png)
+![Study Streak Tracker](./screenshot2.png)
+
 
 ---
 
-## 🎯 Learning Outcomes
+## Key Learnings
 
-- Building REST APIs with Express.js
-- Server-side data persistence
-- Client-server communication (Fetch API)
+- RESTful API design
+- Frontend-backend communication
+- JSON file handling
+- CRUD operations
 - Form validation & error handling
-- File I/O in Node.js
-- Responsive full-stack design
-- Git workflow & GitHub collaboration
+- Responsive UI design
 
 ---
 
-## 📝 Status
+## Author
 
-✅ Project 2 Complete  
-**Next:** Database integration & user authentication
+Built by Rishika as Project 2 for DecodeLabs Internship
 
 ---
 
-**Built during DecodeLabs Internship**  
-Backend focuses on Node.js fundamentals; frontend showcases vanilla JS skills.
+## License
+
+ISC
