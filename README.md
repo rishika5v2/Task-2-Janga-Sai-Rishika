@@ -35,6 +35,7 @@ A simple full-stack web application to track daily study sessions and maintain a
 ## Project Structure
 study-streak-tracker/
 
+<<<<<<< HEAD
 ├── app.js              (Backend server)
 
 ├── index.html          (Frontend UI)
@@ -44,6 +45,20 @@ study-streak-tracker/
 ├── data/
 
 │   └── sessions.json   (Data storage)
+=======
+├── app.js      
+
+├── package.json           
+├── package-lock.json
+
+├── index.html     
+
+├── style.css                 
+├── main.js 
+
+├── data/
+│   └── sessions.json  
+>>>>>>> b3986f02dbc9d2b1a4f1709ca9c78e1fd8bca0e2
 
 └── README.md
 
@@ -121,6 +136,11 @@ Built by Rishika as Project 2 for DecodeLabs Internship
 
 ---
 
+<<<<<<< HEAD
 ## License
 
 ISC
+=======
+**Built during DecodeLabs Internship**  
+Backend focuses on Node.js fundamentals; frontend showcases vanilla JS skills.
+>>>>>>> b3986f02dbc9d2b1a4f1709ca9c78e1fd8bca0e2
